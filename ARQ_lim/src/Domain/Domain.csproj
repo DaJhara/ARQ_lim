@@ -4,9 +4,4 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
-
-  <!-- BAD: Domain project references Infrastructure directly (layering violation) -->
-  <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
-  </ItemGroup>
 </Project>
