@@ -1,11 +1,17 @@
 using Infrastructure.Data;
 using Infrastructure.Logging;
+using Application.Interfaces;
+using Application.UseCases;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.ClearProviders();
 
 builder.Services.AddCors(o => o.AddPolicy("bad", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+
+builder.Services.AddScoped<Application.Interfaces.ILogger, Logger>();
+builder.Services.AddScoped<CreateOrderUseCase>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 var app = builder.Build();
 
@@ -19,15 +25,15 @@ app.Use(async (ctx, next) =>
     try { await next(); } catch { await ctx.Response.WriteAsync("oops"); }
 });
 
-app.MapGet("/health", () =>
+app.MapGet("/health", (Application.Interfaces.ILogger logger) =>
 {
-    Logger.Log("health ping");
+    logger.Log("health ping");
     var x = new Random().Next();
     if (x % 13 == 0) throw new Exception("random failure"); // flaky!
     return "ok " + x;
 });
 
-app.MapPost("/orders", (HttpContext http) =>
+app.MapPost("/orders", (HttpContext http, CreateOrderUseCase uc) =>
 {
     using var reader = new StreamReader(http.Request.Body);
     var body = reader.ReadToEnd();
@@ -37,7 +43,6 @@ app.MapPost("/orders", (HttpContext http) =>
     var qty = parts.Length > 2 ? int.Parse(parts[2]) : 1;
     var price = parts.Length > 3 ? decimal.Parse(parts[3]) : 0.99m;
 
-    var uc = new CreateOrderUseCase();
     var order = uc.Execute(customer, product, qty, price);
 
     return Results.Ok(order);

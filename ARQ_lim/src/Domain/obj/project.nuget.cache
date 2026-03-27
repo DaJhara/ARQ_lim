@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dC6LmWaSLCg=",
+  "dgSpecHash": "DQJN4ZwnOwc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\leona\\Downloads\\BadCleanArch_compilable\\src\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\canon\\source\\repos\\ARQ_lim\\ARQ_lim\\src\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\canon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.25\\microsoft.windowsdesktop.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\canon\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.25\\microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\canon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.25\\microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+  ],
   "logs": []
 }

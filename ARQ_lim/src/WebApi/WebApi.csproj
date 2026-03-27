@@ -7,5 +7,6 @@
   <ItemGroup>
     <!-- BAD: Web directly references everything (tight coupling) -->
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+	 <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 </Project>

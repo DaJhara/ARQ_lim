@@ -1,20 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YKJ8Wvb7i2I=",
-  "success": false,
-  "projectFilePath": "C:\\Users\\leona\\Downloads\\BadCleanArch_compilable\\src\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1108",
-      "level": "Error",
-      "message": "Ciclo detectado. \r\n  Application -> WebApi -> Application.",
-      "projectPath": "C:\\Users\\leona\\Downloads\\BadCleanArch_compilable\\src\\Application\\Application.csproj",
-      "filePath": "C:\\Users\\leona\\Downloads\\BadCleanArch_compilable\\src\\Application\\Application.csproj",
-      "libraryId": "Application",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "dgSpecHash": "nsYs4y2WsFY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\canon\\source\\repos\\ARQ_lim\\ARQ_lim\\src\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\canon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.25\\microsoft.windowsdesktop.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\canon\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.25\\microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\canon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.25\\microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
 }
