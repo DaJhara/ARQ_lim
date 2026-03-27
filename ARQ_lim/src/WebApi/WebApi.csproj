@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8ddfac2a-334f-44eb-abf9-cfc204b6431e</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <!-- BAD: Web directly references everything (tight coupling) -->
