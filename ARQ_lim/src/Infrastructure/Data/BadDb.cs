@@ -5,7 +5,6 @@ using Microsoft.Data.SqlClient;
 namespace Infrastructure.Data;
 
 using System.Data;
-//using System.Data.SqlClient;
 
 public static class BadDb
 {

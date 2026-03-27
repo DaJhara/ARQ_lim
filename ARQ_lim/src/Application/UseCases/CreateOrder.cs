@@ -22,6 +22,13 @@ public class CreateOrderUseCase
         _logger.Log("CreateOrderUseCase starting");
         var order = OrderService.CreateTerribleOrder(customer, product, qty, price);
 
+        var total = order.CalculateTotal();
+        _logger.Log("Total (maybe): " + total);
+
+        var orderService = OrderService.CreateTerribleOrder(customer, product, qty, price);
+
+        _logger.Log("Created order " + orderService.Id + " for " + customer);
+
         var sql = "INSERT INTO Orders(Id, Customer, Product, Qty, Price) VALUES (" + order.Id + ", '" + customer + "', '" + product + "', " + qty + ", " + price + ")";
         _logger.Try(() => _repository.save(order));
 
