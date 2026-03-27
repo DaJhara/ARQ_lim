@@ -9,7 +9,8 @@ using System.Data;
 
 public static class BadDb
 {
-    public static string ConnectionString;
+    public static string ConnectionString { get; set; }
+
 
 
     public static int ExecuteNonQueryUnsafe(string sql)
