@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oE9WsDA8SOU=",
+  "dgSpecHash": "s9pufsF++9s=",
   "success": true,
   "projectFilePath": "C:\\Users\\canon\\source\\repos\\ARQ_lim\\ARQ_lim\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -26,10 +26,7 @@
     "C:\\Users\\canon\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.1\\system.diagnostics.eventlog.8.0.1.nupkg.sha512",
     "C:\\Users\\canon\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.16.0\\system.identitymodel.tokens.jwt.8.16.0.nupkg.sha512",
     "C:\\Users\\canon\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
-    "C:\\Users\\canon\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
-    "C:\\Users\\canon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.25\\microsoft.windowsdesktop.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\canon\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.25\\microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\canon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.25\\microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+    "C:\\Users\\canon\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

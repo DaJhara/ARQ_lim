@@ -3,10 +3,11 @@
     "WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:63958;http://localhost:63959"
+      }
     }
   }
 }

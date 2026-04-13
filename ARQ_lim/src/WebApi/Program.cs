@@ -9,11 +9,17 @@ builder.Logging.ClearProviders();
 
 builder.Services.AddCors(o => o.AddPolicy("bad", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
-builder.Services.AddScoped<Application.Interfaces.ILogger, Logger>();
-builder.Services.AddScoped<CreateOrderUseCase>();
-builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<Application.Interfaces.ILogger, Infrastructure.Logging.Logger>();
+builder.Services.AddScoped<Application.UseCases.CreateOrderUseCase>();
+builder.Services.AddScoped<Application.Interfaces.IOrderRepository, Infrastructure.Data.OrderRepository>();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 BadDb.ConnectionString = app.Configuration.GetConnectionString("Sql");
 

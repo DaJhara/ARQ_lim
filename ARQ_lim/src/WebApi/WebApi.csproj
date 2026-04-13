@@ -6,6 +6,9 @@
     <UserSecretsId>8ddfac2a-334f-44eb-abf9-cfc204b6431e</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
+  </ItemGroup>
+  <ItemGroup>
     <!-- BAD: Web directly references everything (tight coupling) -->
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
 	 <ProjectReference Include="..\Application\Application.csproj" />
