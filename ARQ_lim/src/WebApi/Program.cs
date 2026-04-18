@@ -34,7 +34,7 @@ app.MapGet("/health", (Application.Interfaces.ILogger logger) =>
 {
     logger.Log("health ping");
     var x = new Random().Next();
-    if (x % 13 == 0) throw new Exception("random failure"); // flaky!
+    if (x % 13 == 0) throw new ArgumentException("x no puede ser múltiplo de 13");
     return "ok " + x;
 });
 

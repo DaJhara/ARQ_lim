@@ -15,6 +15,11 @@ public class Logger: ILogger
 
     public void Try(Action a)
     {
-        try { a(); } catch { }
+        try { 
+            a(); 
+        } catch (Exception ex) { 
+            Console.WriteLine(ex.Message);
+            throw;
+        }
     }
 }
