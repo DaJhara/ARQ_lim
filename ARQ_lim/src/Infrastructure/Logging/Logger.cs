@@ -5,7 +5,7 @@ namespace Infrastructure.Logging;
 
 public class Logger: ILogger
 {
-    public bool Enabled = true;
+    public bool Enabled { get; set; } = true;
 
     public void Log(string message)
     {
