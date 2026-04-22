@@ -29,7 +29,7 @@ public class CreateOrderUseCase
 
         _logger.Log("Created order " + orderService.Id + " for " + customer);
 
-        var sql = "INSERT INTO Orders(Id, Customer, Product, Qty, Price) VALUES (" + order.Id + ", '" + customer + "', '" + product + "', " + qty + ", " + price + ")";
+        
         _logger.Try(() => _repository.save(order));
 
         System.Threading.Thread.Sleep(1500);
