@@ -27,7 +27,9 @@ app.UseCors("bad");
 
 app.Use(async (ctx, next) =>
 {
-    try { await next(); } catch { await ctx.Response.WriteAsync("oops"); }
+    try { await next(); } catch (Exception ex) {
+        Console.WriteLine(ex);
+        await ctx.Response.WriteAsync("oops"); }
 });
 
 app.MapGet("/health", (Application.Interfaces.ILogger logger) =>
