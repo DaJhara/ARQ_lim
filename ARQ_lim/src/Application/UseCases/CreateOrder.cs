@@ -30,7 +30,7 @@ public class CreateOrderUseCase
         _logger.Log("Created order " + orderService.Id + " for " + customer);
 
         
-        _logger.Try(() => _repository.save(order));
+        _repository.save(order);
 
         System.Threading.Thread.Sleep(1500);
 

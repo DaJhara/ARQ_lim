@@ -13,13 +13,4 @@ public class Logger: ILogger
         Console.WriteLine("[LOG] " + DateTime.Now + " - " + message);
     }
 
-    public void Try(Action a)
-    {
-        try { 
-            a(); 
-        } catch (Exception ex) { 
-            Console.WriteLine(ex.Message);
-            throw;
-        }
-    }
 }

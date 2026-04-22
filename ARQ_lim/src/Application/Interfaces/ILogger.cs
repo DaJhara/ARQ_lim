@@ -9,6 +9,5 @@ namespace Application.Interfaces
     public interface ILogger
     {
         void Log(string message);
-        void Try(Action action);
     }
 }
